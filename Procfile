@@ -1,1 +1,1 @@
-bot: python main.python
+web gunicorn blog.wsgi:application --log-file -

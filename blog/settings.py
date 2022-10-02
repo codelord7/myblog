@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 
 import os
 from pathlib import Path
+import dj_database_url
 ##from typing_extensions import StrictTypeGuard
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -22,12 +23,16 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-l8^5*u#r1l5r-8f2#np$=_fs4n&u&7qb7iu(_d!n#21e8nkd3v'
+SECRET_KEY = ''
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+if DEBUG:
+    ALLOWED_HOSTS = ["Localhost", "127.0.0.1"]
+
+else:
+    ALLOWED_HOSTS = ['https://anupoud.herokuapp.com/']
 
 
 # Application definition
