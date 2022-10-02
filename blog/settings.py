@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-l8^5*u#r1l5r-8f2#np$=_fs4n&u&7qb7iu(_d!n#21e8nkd3v
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['anupoud.herokuapp.com','127.0.0.1']
 
 
 # Application definition
@@ -77,10 +77,9 @@ WSGI_APPLICATION = 'blog.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
-
-DATABASES = {
-    'default': {
-        'ENGINE':'django.db.backends.mysql',
+'''DATABASES = {
+   'default': {
+     'ENGINE':'django.db.backends.mysql',
         'NAME':'blog_db',
         'USER':'root',
         'PASSWORD':'anup',
@@ -91,7 +90,19 @@ DATABASES = {
         }
     }
 }
+'''
 
+DATABASES = {
+   'default': {
+     'ENGINE':'django.db.backends.postgresql',
+        'NAME':'d5jrlrhiqk775l',
+        'USER':'rjslqlddelcxlr',
+        'PASSWORD':'408bc9fb35aab5ec5c10a907af329e93e4cdba517de81fdb4538a4bbc5460364',
+        'HOST':'ec2-34-231-42-166.compute-1.amazonaws.com',
+        'PORT':'5432',
+        
+    }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
