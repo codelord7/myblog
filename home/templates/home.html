@@ -1,0 +1,273 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width", initial-scale=1.0">
+    <title>Anup's blog</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"></link>
+    <link rel='stylesheet' href="{% static 'home.css' %}"/>
+</head>
+<script>
+    function changeurl(){
+        
+    
+    }
+</script>
+<body onload="changeurl();">
+<header>
+    <div class="user">
+        <img src="{% static 'images/mypic.jpg' %}" alt="">
+        
+        <h3 class="name">anup poudel</h3>
+      
+        <!--<p class="post"><span class="fa fa-facebook"></span></p>-->
+    </div>
+    <div class="mediaicon">
+
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+       
+    </div>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#home">home</a></li>
+            <hr>
+            <li><a href="#about">about</a></li>
+            <hr>
+            <li><a href="#blog">blog</a></li>
+            <hr>
+            <li><a href="#portfolio">portfolio</a></li>
+            <hr>
+            <li><a href="#contact">contact</a></li>
+            <hr>
+        </ul>
+    </nav>
+</header>
+
+<div id="menu" class="fas fa-bars">
+
+</div>
+
+
+<!--home section start here-->
+<section class="home" id="home">
+    {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}  {{errormsg}}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+      
+    <h3>HI THERE !<span class='greet'>👋</span></h3>
+    <h1>I'M <span id="name-container">Anup poudel</span></h1>
+    <p>My name is anup, i am a computer science student and i like to code and read
+        books. please contact me if you want to know me.
+    </p>
+    <a href="#about"><button class="btn">about me <i class="fas fa-user"></i></button></a>
+    <a href=""><button class="btn-hire">Hire me <i class="fas fa-user"></i></button></a>
+   
+
+</section>
+
+<!--home section ends here-->
+
+<!--about section start here-->
+
+<section class='about' id="about">
+    <h1 class='heading'><span>Who am i?</span></h1>
+
+    <div class="row-2">
+       
+      
+        <div class="skills">
+            <h1>My Tech Skills</h1>
+            <div class="progress">
+            <h3>web design<span>80%</span></h3>
+           <div class="bar"><span></span>
+        </div>
+        </div>
+       
+
+        <div class="progress">
+            <h3>web design<span>80%</span></h3>
+           <div class="bar"><span></span></div>
+        </div>
+
+        <div class="progress">
+            <h3>web design<span>80%</span></h3>
+           <div class="bar"><span></span></div>
+        </div>
+
+        <div class="progress">
+            <h3>web design<span>80%</span></h3>
+           <div class="bar"><span></span></div>
+        </div>
+
+        </div>
+        <div class="about-me">
+
+            <h1>about-me</h1>
+            <div class="info">
+                <h3><span>name : </span>Anup Poudel</h3>
+                <h3><span>age : </span>27</h3>
+                <h3><span>qualification : </span>Msc</h3>
+                <h3><span>post : </span>Student</h3>
+                <h3><span>language : </span>Nepali, English, Hindi, German(basic)</h3>
+                <a href='#'><button class='btn-download'>Download CV<i class='fas fa-download'></i> </button></a>
+    
+    
+            </div>
+        </div>
+        </div>
+      
+       
+        <!--
+        <div class="info">
+            <h3><span>name : </span>Anup Poudel</h3>
+            <h3><span>age : </span>27</h3>
+            <h3><span>qualification : </span>Msc</h3>
+            <h3><span>post : </span>Student</h3>
+            <h3><span>language : </span>Nepali, English, Hindi, German(basic)</h3>
+            <a href='#'><button class='btn'>Download CV<i class='fas fa-download'></i> </button></a>
+
+
+        </div>
+        <div class="counter">
+          
+           
+   
+            <div class='box'>
+                <span>1+</span>
+                <h3>project completed</h3>
+            </div>
+            <div class='box'>
+                <span>1+</span>
+                <h3>project completed</h3>
+            </div>
+            <div class='box'>
+                <span>1+</span>
+                <h3>project completed</h3>
+            </div>
+            <div class='box'>
+                <span>1+</span>
+                <h3>project completed</h3>
+            </div>
+        </div>
+    
+    
+    </div>
+-->
+</section>
+
+
+<!--about section end here-->
+<!--portfolio section starts-->
+
+<section class="portfolio" id="portfolio">
+
+    <h1 class="heading">my <span>portfolio</span> </h1>
+    
+    <div class="box-container">
+        
+        <div class="box">
+            <img src="{% static 'images/mypic.jpg' %}" alt="">
+            <div class="portfolio-btn">
+                <a href='#'><button class='portfolio-btn1'>Github<i class="fas fa-github"></i> </button></a>
+                <a href='#'><button class='portfolio-btn2'>View<i class='fas fa-download'></i> </button></a>
+                
+        </div>
+            </div>
+           
+        
+
+        <div class="box">
+            <img src="{% static 'images/mypic.jpg' %}" alt="">
+            <div class="portfolio-btn">
+                <a href='#'><button class='portfolio-btn1'>Github<i class='fas fa-download'></i> </button></a>
+                <a href='#'><button class='portfolio-btn2'>View<i class='fas fa-download'></i> </button></a>
+               
+        </div>
+        </div>
+        
+        <div class="box">
+            <img src="{% static 'images/mypic.jpg' %}" alt="">
+            <div class="portfolio-btn">
+                <a href='#'><button class='portfolio-btn1'>Github<i class='fas fa-download'></i> </button></a>
+                <a href='#'><button class='portfolio-btn2'>View<i class='fas fa-download'></i> </button></a>
+                
+        </div>
+        </div>
+
+
+    </div>
+</section>
+
+
+
+
+
+<!--portfolio section ends-->
+<!--contact section start-->
+<section class="contact" id="contact">
+
+    <h1 class="heading"><span>contact</span>
+        
+    </h1>
+
+    <div class="row">
+
+        <div class="content">
+
+            <h3 class="title">contact info</h3>
+
+            <div class="info">
+                <h3><i class="fas fa-envelope"></i>anupbro7@gmail.com</h3>
+                <h3><i class="fas fa-phone"></i>+49634392590</h3>
+                <h3><i class="fas fa-map-marker-alt"></i>Kaiserslautern, Germany</h3>
+
+            </div>
+        </div>
+       
+        <form action="home" method="POST">
+            {% csrf_token %}
+            <input type="text" name="fullname" placeholder="name" class="box">
+            <input type="email" name="email" placeholder="email" class="box">
+            <input type="text" placeholder="title" name="title" class="box">
+            <textarea name="message" id="" cols="30" rows="10" class="box message" placeholder="message"></textarea>
+        {% comment %}
+        {{ form.as_table }} 
+        {% endcomment %}   
+        <button type="submit" id="contact-btn" name="contact_submit" class="btn-submit">send <i class="fas fa-paper-plane"></i></button>
+            
+        </form>
+ 
+    </div>
+    <footer>
+        <h3>&copy;2022|created by: <span>Anup</span> |credit:Mr.web designer|Powered by: <span> Django</span></h3>
+    </footer>
+    
+
+</section>
+
+
+
+<!--contact section end-->
+<!--footer section start-->
+
+
+
+<!--footer section ends-->
+
+
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="{% static 'script.js' %}"></script>
+</body>
+</html>
