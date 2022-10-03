@@ -145,6 +145,7 @@ STATIC_ROOT = os.path.join(BASE_DIR,  'static')
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 '''
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
+STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
 TEMPLATE_DIRS = (
