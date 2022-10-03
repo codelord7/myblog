@@ -51,7 +51,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+      'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'blog.urls'
@@ -146,7 +146,7 @@ STATIC_ROOT = os.path.join(BASE_DIR,  'static')
 '''
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
 TEMPLATE_DIRS = (
     os.path.join(BASE_DIR,  'templates'),
     # Add to this list all the locations containing your static files 
