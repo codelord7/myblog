@@ -47,7 +47,5 @@ function textassign(){
 }
 
 
-
-
 });
 
